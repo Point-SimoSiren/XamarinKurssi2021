@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinTimesheet2021.WorkAssignmentPage">
+  
+        <StackLayout>
+            <Label Text="Työtehtävät" />
+
+        <Label x:Name="työ_lataus"> </Label> 
+
+        <ListView x:Name="workList" StyleClass="lista" SelectionMode="Single">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+
+                        <TextCell Text="{Binding Title}" Detail="{Binding Deadline}"/>
+
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+
+        <StackLayout Orientation="Horizontal">
+
+            <Button x:Name="Aloitus_Nappi" Text="Aloita työ" Clicked="Aloitus_Nappi_Clicked"></Button>
+
+            <Button x:Name="Lopetus_Nappi" Text="Lopeta työ" Clicked="Lopetus_Nappi_Clicked"></Button>
+            
+        </StackLayout>
+            
+       </StackLayout>
+    
+</ContentPage>

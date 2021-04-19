@@ -1,0 +1,15 @@
+C:\Users\siren\source\repos\XamarinTimesheet2021\XamarinTimesheet2021\bin\Debug\netstandard2.0\XamarinTimesheet2021.deps.json
+C:\Users\siren\source\repos\XamarinTimesheet2021\XamarinTimesheet2021\bin\Debug\netstandard2.0\XamarinTimesheet2021.dll
+C:\Users\siren\source\repos\XamarinTimesheet2021\XamarinTimesheet2021\bin\Debug\netstandard2.0\ref\XamarinTimesheet2021.dll
+C:\Users\siren\source\repos\XamarinTimesheet2021\XamarinTimesheet2021\bin\Debug\netstandard2.0\XamarinTimesheet2021.pdb
+C:\Users\siren\source\repos\XamarinTimesheet2021\XamarinTimesheet2021\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\siren\source\repos\XamarinTimesheet2021\XamarinTimesheet2021\obj\Debug\netstandard2.0\EmployeePage.xaml.g.cs
+C:\Users\siren\source\repos\XamarinTimesheet2021\XamarinTimesheet2021\obj\Debug\netstandard2.0\XamarinTimesheet2021.AssemblyInfoInputs.cache
+C:\Users\siren\source\repos\XamarinTimesheet2021\XamarinTimesheet2021\obj\Debug\netstandard2.0\XamarinTimesheet2021.AssemblyInfo.cs
+C:\Users\siren\source\repos\XamarinTimesheet2021\XamarinTimesheet2021\obj\Debug\netstandard2.0\XamarinTimesheet2021.csproj.CoreCompileInputs.cache
+C:\Users\siren\source\repos\XamarinTimesheet2021\XamarinTimesheet2021\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\siren\source\repos\XamarinTimesheet2021\XamarinTimesheet2021\obj\Debug\netstandard2.0\XamarinTimesheet2021.dll
+C:\Users\siren\source\repos\XamarinTimesheet2021\XamarinTimesheet2021\obj\Debug\netstandard2.0\ref\XamarinTimesheet2021.dll
+C:\Users\siren\source\repos\XamarinTimesheet2021\XamarinTimesheet2021\obj\Debug\netstandard2.0\XamarinTimesheet2021.pdb
+C:\Users\siren\source\repos\XamarinTimesheet2021\XamarinTimesheet2021\obj\Debug\netstandard2.0\WorkAssignmentPage.xaml.g.cs
+C:\Users\siren\source\repos\XamarinTimesheet2021\XamarinTimesheet2021\obj\Debug\netstandard2.0\XamarinTimesheet2021.csprojAssemblyReference.cache
