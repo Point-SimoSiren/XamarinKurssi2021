@@ -64,7 +64,8 @@ namespace XamarinTimesheet2021
             {
                 await DisplayAlert("Valinta puuttuu", "Valitse työtehtävä.", "OK");
             }
-
+            
+            
             try
             {
                 Operation op = new Operation
@@ -83,8 +84,7 @@ namespace XamarinTimesheet2021
                 // Muutetaan em. data objekti Jsoniksi
                 string input = JsonConvert.SerializeObject(op);
                 StringContent content = new StringContent(input, Encoding.UTF8, "application/json");
-
-
+                
                 // Lähetetään serialisoitu objekti back-endiin Post pyyntönä
                 HttpResponseMessage message = await client.PostAsync("/api/workassignments", content);
 
@@ -93,8 +93,8 @@ namespace XamarinTimesheet2021
                 string reply = await message.Content.ReadAsStringAsync();
 
 
-                //Asetetaan vastaus serialisoituna success muuttujaan
-                bool success = JsonConvert.DeserializeObject<bool>(reply);
+                 //Asetetaan vastaus serialisoituna success muuttujaan
+                 bool success = JsonConvert.DeserializeObject<bool>(reply);
 
                 if (success == false)
                 {
@@ -126,7 +126,7 @@ namespace XamarinTimesheet2021
             }
 
             string result = await DisplayPromptAsync("Kommentti", "Kirjoita kommentti");
-
+            
             try
             {
                 Operation op = new Operation
