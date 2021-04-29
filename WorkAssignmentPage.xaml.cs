@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 using System.Net.Http;
 using System.Collections.ObjectModel;
 using XamarinTimesheet2021.Models;
+using Xamarin.Essentials;
 
 namespace XamarinTimesheet2021
 {
@@ -23,10 +24,53 @@ namespace XamarinTimesheet2021
 
             eId = idParam;
 
+       
+            lon_label.Text = "Sijaintia haetaan";
+
             //Annetaan latausilmoitus
             työ_lataus.Text = "Ladataan työtehtäviä...";
 
+            GetCurrentLocation();
+
             LoadDataFromRestAPI();
+
+  
+            // -------------------Sijainnin haku ja näyttäminen--------
+            async void GetCurrentLocation()
+            {
+                try
+                {
+                    var request = new GeolocationRequest(GeolocationAccuracy.Medium, TimeSpan.FromSeconds(10));
+                    
+                    var location = await Geolocation.GetLocationAsync(request);
+
+                    if (location != null)
+                    {
+
+                        lon_label.Text = "Longitude: " + location.Longitude;
+                        lat_label.Text = $"Latitude: {location.Latitude}";
+                    }
+                }
+                catch (FeatureNotSupportedException fnsEx)
+                {
+                    await DisplayAlert("Virhe", fnsEx.ToString() , "ok");
+                }
+                catch (FeatureNotEnabledException fneEx)
+                {
+                    await DisplayAlert("Virhe", fneEx.ToString(), "ok");
+                }
+                catch (PermissionException pEx)
+                {
+                    await DisplayAlert ("Virhe", pEx.ToString(), "ok");
+                }
+                catch (Exception ex)
+                {
+                    await DisplayAlert("Virhe", ex.ToString(), "ok");
+                }
+       
+            }
+
+            //---------------------------------------
 
             async void LoadDataFromRestAPI()
             {
@@ -37,7 +81,7 @@ namespace XamarinTimesheet2021
 
                     HttpClient client = new HttpClient();
 
-                    client.BaseAddress = new Uri("https://timesheetbackend2021.azurewebsites.net/");
+                    client.BaseAddress = new Uri("https://timesheetbackend007.azurewebsites.net/");
                     string json = await client.GetStringAsync("/api/workassignments/");
 
                     IEnumerable<WorkAssignment> works = JsonConvert.DeserializeObject<WorkAssignment[]>(json);

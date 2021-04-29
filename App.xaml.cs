@@ -24,5 +24,6 @@ namespace XamarinTimesheet2021
         protected override void OnResume()
         {
         }
+
     }
 }

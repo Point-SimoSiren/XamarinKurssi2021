@@ -20,6 +20,10 @@
 
             </ListView>
 
+        <Label x:Name="lat_label"></Label>
+            
+        <Label x:Name="lon_label"></Label>
+
 
         <StackLayout Orientation="Horizontal">
 
